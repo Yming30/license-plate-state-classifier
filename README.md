@@ -58,6 +58,7 @@ This project uses a **Bidirectional LSTM with Attention** mechanism to classify 
 ### Why ~50% accuracy?
 
 Analysis shows that **31 out of 51 states share similar format patterns** (e.g., `ABC1234`), making them hard to distinguish. Only 20 states have unique formats that the model can reliably identify.the most common pattern LLDDD (~153k samples) is used by 17 states; LL-DDDD is shared by 11, and LLLDDD by 10. Thus, even perfect identification of the format still maps to multiple states, making the label fundamentally hard to determine from the string alone.
+
 <img width="699" height="316" alt="截屏2026-01-08 22 56 00" src="https://github.com/user-attachments/assets/02cf2215-18ee-4148-ba0a-6bc4d642b734" />
 <img width="702" height="284" alt="截屏2026-01-08 22 56 23" src="https://github.com/user-attachments/assets/a860c193-03eb-41d1-bf83-6d1373fd2801" />
 <img width="704" height="289" alt="截屏2026-01-08 22 56 44" src="https://github.com/user-attachments/assets/e34721cd-97a4-46c0-a2b7-8a4adc699ade" />
@@ -74,5 +75,4 @@ This is why accuracy plateaus around 50%
 ## Future Improvements
 
 - Add artificial distinguishing features for states with shared formats
-- Consider computer vision
 - Include real license plate images (CNN + LSTM)
